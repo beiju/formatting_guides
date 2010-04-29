@@ -24,6 +24,11 @@ Class extension_markdown_guide extends Extension {
 			'delegate' => 'ModifyTextareaFieldPublishWidget',
 			'callback' => 'addGuideBelowTextArea'
 			),
+			array(
+			'page'		=> '/backend/',
+			'delegate'	=> 'InitaliseAdminPageHead',
+			'callback'	=> 'initaliseAdminPageHead'
+			)
 		);
 	}
 	
@@ -41,9 +46,23 @@ Class extension_markdown_guide extends Extension {
 		//retrieve the guide and append it
 		$file = DOCROOT . '/extensions/markdown_guide/guide.txt';
 		$contents = file_get_contents($file);
-		$guide = Widget::Label($contents);
+		$guide = Widget::Label($contents,null,'markdown_guide');
 		$pointer['label']->appendChild($guide);
 	}
+
+
+	/*-------------------------------------------------------------------------
+		Delegates:
+	-------------------------------------------------------------------------*/
+		
+		public function initaliseAdminPageHead($context) {
+			$page = $context['parent']->Page;
+			
+			// Include only in section edit pages
+			//if ($page instanceof contentBlueprintsSections and $page->_context[0] == 'edit') {
+				$page->addScriptToHead(URL . '/extensions/markdown_guide/assets/collapse_guide.js', 900200);
+			//}
+		}
 }
 
 ?>
