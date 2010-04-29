@@ -4,7 +4,7 @@ Markdown Guide Extension
 * Version: 1.0
 * Author: Carson Sasser (sassercw@cox.net)
 * Build Date: 22 April 2010
-* Requirements: Only tested on Symphony CMS 2.0.8RC1
+* Requirements: Tested on Symphony CMS 2.0.8RC1, 2.0.6
 
 Installation
 ------------
