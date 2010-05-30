@@ -1,7 +1,7 @@
-Markdown Guide Extension
+Formatting Guides Extension
 =======================
 
-* Version: 2.0Œ≤1
+* Version: 2.0É¿1
 * Author: Will P (beiju@iwillsite.com)
 * Build Date: 30 May 2010
 * Requirements: Tested on Symphony CMS 2.0.8RC3
@@ -27,7 +27,7 @@ TODO
 Change Log
 ----------
 
-Version 2.0Œ≤1 - 30 May 2010
+Version 2.0É¿1 - 30 May 2010
 
 - Changed name to **Formatting Guides**
 
