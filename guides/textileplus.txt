@@ -1,0 +1,29 @@
+Headers: Begin the line with <strong>h<em>n</em>.</strong> where <em>n</em> is the header level, as in: <code style="font-size:x-small">h3. This is an h3 header</code><br />
+
+Paragraphs: Seperate with a blank line<br />
+
+Blockquotes: Precede with <strong>bq.</strong>, as in: <code style="font-size:x-small">bq. This is a block quote.</code><br />
+
+Unorderd lists: Precede list items with a <strong>*</strong>, as in: <code style="font-size:x-small">* This is an unordered list item.</code><br />
+
+Orderd lists: Precede list items with a <strong>#</strong>, as in: <code style="font-size:x-small"># This is a ordered list item.</code><br />
+
+Emphasis: <strong>*</strong>bold<strong>*</strong> or  <strong>_</strong>italics<strong>_</strong><br />
+
+Links: <strong>"</strong>link text <strong>(</strong>optional title<strong>)":</strong>url, as in: <code style="font-size:x-small">"Example (Example Link)":http://example.com/</code><br />
+
+Images: <strong>!</strong>path/to/image.jpg<strong>(</strong>optional alternate text<strong>)!</strong>, as in: <code style="font-size:x-small">!example/image.jpg(Example Image)!</code><br />
+
+Linked Images: <strong>!</strong>path/to/image.jpg<strong>(</strong>optional alternate text<strong>)!:</strong>url, as in: <code style="font-size:x-small">!example/image.jpg(Example Image)!:http://example.com/</code><br />
+
+Code blocks: Precede with <strong>bc.</strong>, as in: <code style="font-size:x-small">bc. This is block code.</code><br />
+
+Inline code: Wrap the code with <strong>@</strong> characters, as in: <code style="font-size:x-small">@this is some code@</code><br />
+
+Acronyms: Acronym<strong>(</strong>Definition<strong>)</strong>, as in: <code style="font-size:x-small">TLA(Three Letter Acronym)</code><br /><br />
+
+Textile also provides:
+<ul><li>Smart Quotes</li>
+<li>Em Dashes ('em -- dash' &rarr; 'em &#8212; dash')</li>
+<li>En Dashes ('en - dash' &rarr; 'en &#8211; dash')</li>
+<li>Prevents "widowing words" &#8212; a single word on the last line of a paragraph</li></ul> 

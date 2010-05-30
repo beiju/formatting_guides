@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
 	// Insert anchor that will act as toggle to collapse/uncollapse the sectionfields
-	jQuery('.markdown_guide').before('\
-		(<a title="Toggle collapse" class="togglecollapse">Markdown guide</a>)\
+	jQuery('.formatting_guides').before('\
+		(<a title="Toggle collapse" class="togglecollapse">Show formatting guide</a>)\
 	');
 	
 	jQuery("a.togglecollapse").each(function () {

@@ -1,18 +1,18 @@
 <?php
 
-Class extension_markdown_guide extends Extension {
+Class extension_formatting_guides extends Extension {
   
 	// Simply outputs information to Symphony about the extension
 	public function about() {
 		$info = array(
 			'author' => array(
-				'email' => 'sassercw@cox.net',
-				'name' => 'Carson Sasser',
-				'website' => 'http://carsonsasser.com/'
+				'email' => 'beiju@iwillsite.com',
+				'name' => 'Will P',
+				'website' => 'http://iwillsite.com/'
 			),
-			'name' => 'Markdown Guide',
-			'release-date' => '2010-04-20',
-			'version' => '1.0'
+			'name' => 'Formatting Guides',
+			'release-date' => '2010-05-30',
+			'version' => '2.0Œ≤1'
 		);
 		return $info;
 	}
@@ -35,19 +35,22 @@ Class extension_markdown_guide extends Extension {
 	public function addGuideBelowTextArea($pointer) {
 		//only show guide when using markdown
 		$formatter = substr($pointer['field']->get('formatter'), 0,  11);
-		if ($formatter != 'pb_markdown') return;
+		
+		$file = DOCROOT . '/extensions/formatting_guides/guides/' . $formatter . '.txt';
+		
+		if (file_exists($file)) {
+			//append the textarea here so the guide will show after the textarea in the form
+			$pointer['label']->appendChild($pointer['textarea']);
 
-		//append the textarea here so the guide will show after the textarea in the form
-		$pointer['label']->appendChild($pointer['textarea']);
+			//nullify the textarea to prevent another one being appended in field.textarea.php
+			$pointer['textarea'] = Widget::Label('');
 
-		//nullify the textarea to prevent another one being appended in field.textarea.php
-		$pointer['textarea'] = Widget::Label('');
-
-		//retrieve the guide and append it
-		$file = DOCROOT . '/extensions/markdown_guide/guide.txt';
-		$contents = file_get_contents($file);
-		$guide = Widget::Label($contents,null,'markdown_guide');
-		$pointer['label']->appendChild($guide);
+			//retrieve the guide and append it
+			$contents = file_get_contents($file);
+			$guide = Widget::Label($contents,null,'formatting_guides');
+			$pointer['label']->appendChild($guide);
+		}
+		
 	}
 
 
@@ -60,7 +63,7 @@ Class extension_markdown_guide extends Extension {
 			
 			// Include only in section edit pages
 			//if ($page instanceof contentBlueprintsSections and $page->_context[0] == 'edit') {
-				$page->addScriptToHead(URL . '/extensions/markdown_guide/assets/collapse_guide.js', 900200);
+				$page->addScriptToHead(URL . '/extensions/formatting_guides/assets/collapse_guide.js', 900200);
 			//}
 		}
 }
